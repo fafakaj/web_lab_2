@@ -1,0 +1,11 @@
+{
+  "isu_id": "415001",
+  "full_name": "  Соколова   Елена  Викторовна ",
+  "group": "m3302",
+  "dormitory": "len",
+  "room": "4020",
+  "check_in": "2025-09-01",
+  "check_out": null,
+  "is_foreign": false,
+  "notes": "Создана через curl"
+}

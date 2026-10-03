@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Добавление / редактирование студента</title>
+    <link rel="icon" href="image.png" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Управление студентами</h1>
+    <nav>
+        <a href="index.html">Список студентов</a>
+        <a href="student-form.html">Добавить студента</a>
+    </nav>
+</header>
+
+<main>
+    <h2 id="form-title">Добавление студента</h2>
+
+    <form id="student-form">
+        <p>
+            <label for="full_name">ФИО студента</label>
+            <input type="text" id="full_name" name="full_name" required minlength="5" maxlength="100"
+                   pattern="\s*[A-Za-zА-ЯЁа-яё]+(?:['\-][A-Za-zА-ЯЁа-яё]+)*(?:\s+[A-Za-zА-ЯЁа-яё]+(?:['\-][A-Za-zА-ЯЁа-яё]+)*)+\s*"
+                   title="Минимум фамилия и имя, только буквы; внутри слова можно дефис или апостроф">
+            <span class="field-error" id="error-full_name"></span>
+        </p>
+
+        <p>
+            <label for="group">Группа</label>
+            <input type="text" id="group" name="group" required minlength="5" maxlength="5"
+                   pattern="[A-Za-z]\d{4}" title="Латинская буква и четыре цифры, например M3301">
+            <span class="field-error" id="error-group"></span>
+        </p>
+
+        <p>
+            <label for="isu_id">ИСУ id</label>
+            <input type="text" id="isu_id" name="isu_id" required pattern="\d{6}" minlength="6" maxlength="6"
+                   inputmode="numeric" title="Ровно шесть цифр">
+            <span class="field-error" id="error-isu_id"></span>
+        </p>
+
+        <p>
+            <label for="dormitory">Общежитие</label>
+            <select id="dormitory" name="dormitory" required>
+                <option value="" disabled selected></option>
+            </select>
+            <span class="field-error" id="error-dormitory"></span>
+        </p>
+
+        <p>
+            <label for="room">Комната</label>
+            <input type="text" id="room" name="room" required pattern="[1-9]\d{3}" minlength="4" maxlength="4"
+                   inputmode="numeric" title="Ровно четыре цифры, первая не 0, например 1205">
+            <span class="field-error" id="error-room"></span>
+        </p>
+
+        <p>
+            <label for="check_in">Дата заселения</label>
+            <input type="date" id="check_in" name="check_in" required min="2000-01-01">
+            <span class="field-error" id="error-check_in"></span>
+        </p>
+
+        <p>
+            <label for="check_out">Дата выселения</label>
+            <input type="date" id="check_out" name="check_out" required>
+            <span class="field-error" id="error-check_out"></span>
+            <label for="living" class="checkbox-label">
+                <input type="checkbox" id="living" name="living">
+                Ещё проживает в общежитии
+            </label>
+        </p>
+
+        <p class="form-row-wide">
+            <label for="is_foreign" class="checkbox-label">
+                <input type="checkbox" id="is_foreign" name="is_foreign">
+                Студент является иностранцем
+            </label>
+            <span class="field-error" id="error-is_foreign"></span>
+        </p>
+
+        <p class="form-row-wide">
+            <label for="notes">Заметки</label>
+            <textarea id="notes" name="notes" rows="4" maxlength="500"></textarea>
+            <span class="field-error" id="error-notes"></span>
+        </p>
+
+        <p id="form-error" class="form-error form-row-wide"></p>
+
+        <p class="form-row-wide">
+            <button type="submit" class="button-primary">Сохранить</button>
+            <a class="button" href="index.html">Отмена</a>
+        </p>
+    </form>
+</main>
+
+<footer>
+    <p>Лабораторная работа №2</p>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/form.js"></script>
+
+</body>
+</html>

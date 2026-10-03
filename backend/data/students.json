@@ -1,0 +1,90 @@
+[
+  {
+    "isu_id": "412345",
+    "full_name": "Иванов Иван Иванович",
+    "group": "M3301",
+    "dormitory": "alp",
+    "room": "1205",
+    "check_in": "2024-09-01",
+    "check_out": null,
+    "is_foreign": false,
+    "notes": ""
+  },
+  {
+    "isu_id": "412346",
+    "full_name": "Петрова Анна Сергеевна",
+    "group": "M3301",
+    "dormitory": "alp",
+    "room": "1207",
+    "check_in": "2024-09-01",
+    "check_out": null,
+    "is_foreign": false,
+    "notes": "Староста этажа"
+  },
+  {
+    "isu_id": "410020",
+    "full_name": "Гарсия Лопес Карлос",
+    "group": "M3301",
+    "dormitory": "alp",
+    "room": "1301",
+    "check_in": "2024-09-01",
+    "check_out": "2025-01-31",
+    "is_foreign": true,
+    "notes": "Выселился после первого семестра"
+  },
+  {
+    "isu_id": "398712",
+    "full_name": "Римский-Корсаков Николай Андреевич",
+    "group": "P3213",
+    "dormitory": "sg",
+    "room": "2104",
+    "check_in": "2023-08-28",
+    "check_out": "2025-06-30",
+    "is_foreign": false,
+    "notes": ""
+  },
+  {
+    "isu_id": "405501",
+    "full_name": "Ли Вэй",
+    "group": "K3221",
+    "dormitory": "bel",
+    "room": "3112",
+    "check_in": "2025-08-30",
+    "check_out": null,
+    "is_foreign": true,
+    "notes": "Студент по обмену"
+  },
+  {
+    "isu_id": "401177",
+    "full_name": "О'Брайен Шон",
+    "group": "M3302",
+    "dormitory": "len",
+    "room": "4016",
+    "check_in": "2024-09-02",
+    "check_out": null,
+    "is_foreign": true,
+    "notes": ""
+  },
+  {
+    "isu_id": "389944",
+    "full_name": "Смирнова Мария Олеговна",
+    "group": "R3340",
+    "dormitory": "msg",
+    "room": "2210",
+    "check_in": "2022-09-01",
+    "check_out": "2024-07-15",
+    "is_foreign": false,
+    "notes": ""
+  },
+  {
+    "isu_id": "407788",
+    "full_name": "Кузнецов Дмитрий Павлович",
+    "group": "P3213",
+    "dormitory": "bel",
+    "room": "3305",
+    "check_in": "2025-09-01",
+    "check_out": null,
+    "is_foreign": false,
+    "notes": "Нужна справка о проживании"
+  }
+]

@@ -1,0 +1,320 @@
+:root {
+    --bg:      #ffffff;
+    --surface: #f4f4f4;
+    --line:    #d4d4d4;
+    --muted:   #6e6e6e;
+    --ink:     #1a1a1a;
+
+    --accent:      #2f6fb2;
+    --accent-dark: #23578c;
+    --accent-line: #c7d8ea;
+    --accent-weak: #eef4fa;
+
+    --danger:      #b3261e;
+    --danger-weak: #fdeceb;
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--ink);
+    background-color: var(--bg);
+    margin: 0;
+    padding: 0;
+}
+
+header, main, footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+header {
+    border-bottom: 2px solid var(--accent-line);
+}
+
+h1 {
+    font-size: 24px;
+    margin: 12px 0;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+nav a {
+    margin-right: 15px;
+    color: var(--accent);
+}
+
+main {
+    border: 1px solid var(--accent-line);
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer {
+    color: var(--muted);
+    font-size: 14px;
+    text-align: center;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid var(--line);
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--accent-weak);
+}
+
+#students-table tbody tr:hover {
+    background-color: var(--accent-weak);
+}
+
+#students-table {
+    table-layout: fixed;
+}
+
+#students-table th {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+#students-table th:nth-child(1) { width: 17%; }
+#students-table th:nth-child(2) { width: 9%; }
+#students-table th:nth-child(3) { width: 9%; }
+#students-table th:nth-child(4) { width: 13%; }
+#students-table th:nth-child(5) { width: 10%; }
+#students-table th:nth-child(6) { width: 13%; }
+#students-table th:nth-child(7) { width: 13%; }
+#students-table th:nth-child(8) { width: 16%; }
+
+#students-table td {
+    overflow-wrap: anywhere;
+}
+
+#students-table td:last-child {
+    overflow-wrap: normal;
+}
+
+#students-table td:last-child a,
+#students-table td:last-child button {
+    display: inline-block;
+    margin: 0 8px 4px 0;
+    font-size: 14px;
+}
+
+#students-table td:last-child button {
+    color: var(--danger);
+    border-color: var(--danger);
+    background-color: var(--bg);
+}
+
+#students-table td:last-child button:hover {
+    background-color: var(--danger-weak);
+}
+
+#students-table td:last-child button:focus-visible {
+    outline-color: var(--danger);
+}
+
+td a {
+    margin-right: 8px;
+    color: var(--accent);
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 16px;
+    margin-bottom: 12px;
+    padding: 12px 12px 0;
+    background-color: var(--surface);
+    border: 1px solid var(--line);
+}
+
+.filters p {
+    margin: 0 0 12px;
+}
+
+.filters-actions {
+    grid-column: 1 / -1;
+}
+
+.filters-actions .button {
+    margin-left: 8px;
+}
+
+.filters input:invalid:not(:placeholder-shown) {
+    border: 2px solid var(--ink);
+}
+
+.status-line {
+    margin: 0 0 12px;
+}
+
+.status-line:empty {
+    display: none;
+}
+
+#student-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 20px;
+}
+
+#student-form p {
+    margin: 0 0 14px;
+}
+
+.form-row-wide {
+    grid-column: 1 / -1;
+}
+
+label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 6px;
+    font: inherit;
+    color: var(--ink);
+    background-color: var(--bg);
+    border: 1px solid var(--line);
+    box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+    width: auto;
+}
+
+.checkbox-label {
+    display: inline-block;
+    margin-top: 4px;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--accent);
+}
+
+input:disabled {
+    background-color: var(--surface);
+    color: var(--muted);
+}
+
+.was-submitted input:invalid,
+.was-submitted select:invalid,
+.was-submitted textarea:invalid,
+.has-error {
+    border: 2px solid var(--ink);
+}
+
+.field-error, .form-error, .status-line {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.field-error:not(:empty)::before,
+.form-error:not(:empty)::before,
+.status-line:not(:empty)::before {
+    content: "! ";
+}
+
+button, .button {
+    display: inline-block;
+    padding: 6px 12px;
+    font: inherit;
+    border: 1px solid var(--line);
+    background-color: var(--surface);
+    color: var(--ink);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button:hover, .button:hover {
+    background-color: var(--line);
+}
+
+.button-primary {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg);
+}
+
+.button-primary:hover {
+    background-color: var(--accent-dark);
+    border-color: var(--accent-dark);
+}
+
+@media (max-width: 700px) {
+    header, main, footer {
+        padding: 10px;
+    }
+
+    #students-table,
+    #students-table tbody {
+        display: block;
+    }
+
+    #students-table thead {
+        display: none;
+    }
+
+    #students-table tr {
+        display: block;
+        border: 1px solid var(--line);
+        margin-bottom: 12px;
+        padding: 4px 8px;
+    }
+
+    #students-table td {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 4px 12px;
+        border: none;
+        border-bottom: 1px solid var(--line);
+        padding: 6px 0;
+    }
+
+    #students-table tr td:last-child {
+        border-bottom: none;
+    }
+
+    #students-table td::before {
+        content: attr(data-label);
+        color: var(--muted);
+        font-size: 14px;
+    }
+
+    #students-table td:not([data-label]) {
+        display: block;
+    }
+
+    #student-form,
+    .filters {
+        grid-template-columns: 1fr;
+    }
+}

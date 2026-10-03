@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Досье студента</title>
+    <link rel="icon" href="image.png" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Управление студентами</h1>
+    <nav>
+        <a href="index.html">Список студентов</a>
+        <a href="student-form.html">Добавить студента</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Досье студента</h2>
+
+    <table id="student-info">
+        <tr>
+            <th>ФИО</th>
+            <td id="info-full_name"></td>
+        </tr>
+        <tr>
+            <th>Группа</th>
+            <td id="info-group"></td>
+        </tr>
+        <tr>
+            <th>ИСУ id</th>
+            <td id="info-isu_id"></td>
+        </tr>
+        <tr>
+            <th>Общежитие</th>
+            <td id="info-dormitory"></td>
+        </tr>
+        <tr>
+            <th>Комната</th>
+            <td id="info-room"></td>
+        </tr>
+        <tr>
+            <th>Срок заселения</th>
+            <td id="info-period"></td>
+        </tr>
+        <tr>
+            <th>Иностранец</th>
+            <td id="info-is_foreign"></td>
+        </tr>
+        <tr>
+            <th>Заметки</th>
+            <td id="info-notes"></td>
+        </tr>
+    </table>
+
+    <p>
+        <a class="button" id="edit-link" href="student-form.html">Редактировать</a>
+        <a class="button" href="index.html">Назад к списку</a>
+    </p>
+</main>
+
+<footer>
+    <p>Лабораторная работа №2</p>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/info.js"></script>
+
+</body>
+</html>
